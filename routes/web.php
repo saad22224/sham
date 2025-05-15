@@ -30,8 +30,9 @@ Route::get('/shamadmin', function () {
 
 Route::get('/admin/dashboard', function () {
     return view('dashboard.index');
-})->name('admin.dashboard');
+})->name('admin.dashboard')->middleware('admin');
 
 Route::post('/login', [App\Http\Controllers\admin\AdminLoginController::class, 'login'])->name('admin.login');
 Route::post('/logout', [App\Http\Controllers\admin\AdminLoginController::class, 'logout'])->name('admin.logout');
-Route::get('/users', [App\Http\Controllers\admin\AdminLoginController::class, 'getusers'])->name('admin.getusers');
+Route::get('/users', [App\Http\Controllers\admin\AdminLoginController::class, 'getusers'])
+->name('admin.getusers')->middleware('admin');
