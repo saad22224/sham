@@ -28,7 +28,7 @@ class Controller extends BaseController
         $user = User::create([
             'phone' => $request->phone,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
         session(['registered' => true]);
         Auth::login($user); // بعد الإنشاء

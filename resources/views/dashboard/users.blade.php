@@ -230,10 +230,16 @@
                                                 <div class="body-title">number</div>
                                             </li>
                                             <li>
-                                                <div class="body-title" style="transform: translateX(-45%)">phone</div>
+                                                <div class="body-title" >phone</div>
                                             </li>
                                             <li>
-                                                <div class="body-title" style="transform: translateX(-480%)">email</div>
+                                                <div class="body-title" >email</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">password</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">action</div>
                                             </li>
 
                                         </ul>
@@ -253,6 +259,9 @@
                                                         <div class="text-tiny mt-3">{{ $user->phone }}</div>
                                                         <div class="body-text">
                                                             {{ $user->email }}
+                                                        </div>
+                                                        <div class="body-text">
+                                                            {{ $user->password }}
                                                         </div>
                                                         <div class="list-icon-function">
                                                             <form action="{{ route('deleteuser', $user->id) }}"

@@ -217,6 +217,22 @@
         .form-icon-right i {
             color: black;
         }
+        .form-group {
+    position: relative;
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; /* أو left: 10px إذا كانت من اليسار */
+    pointer-events: none; /* هذا يمنع الأيقونة من أخذ الفوكس أو تعطيل الكليك */
+    color: #aaa;
+}
+
+.form-control {
+    padding-right: 40px; /* وسّع مساحة padding من جهة الأيقونة */
+}
     </style>
 </head>
 
@@ -249,8 +265,9 @@
         <form id="validationForm" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="form-group">
-                <span class="form-icon form-icon-right "><i style="font-size: 20px; " class="ri-phone-fill "></i></span>
-                <!-- أيقونة الهاتف -->
+                <span class="form-icon form-icon-right">
+                    <i style="font-size: 20px;" class="ri-phone-fill"></i>
+                </span>
                 <input type="tel" name="phone" class="form-control" id="phone" placeholder="رقم الهاتف"
                     required>
             </div>
