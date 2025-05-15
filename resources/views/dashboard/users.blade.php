@@ -54,9 +54,9 @@
                 </div>
                 <!-- /preload -->
                 <!-- section-menu-left -->
-             <div class="section-menu-left">
+                <div class="section-menu-left">
                     <div class="box-logo">
-                        <a href="{{route('admin.dashboard')}}" id="site-logo-inner">
+                        <a href="{{ route('admin.dashboard') }}" id="site-logo-inner">
                             <img class="" alt="" src="" data-light="" data-dark="">
                         </a>
                         <div class="button-show-hide">
@@ -75,7 +75,7 @@
                                         </a>
                                         <ul class="sub-menu" style="display: block;">
                                             <li class="sub-menu-item">
-                                                <a href="{{route('admin.dashboard')}}" class="active">
+                                                <a href="{{ route('admin.dashboard') }}" class="active">
                                                     <div class="text">الرئيسية</div>
                                                 </a>
                                             </li>
@@ -94,7 +94,7 @@
                                         </a>
                                         <ul class="sub-menu">
                                             <li class="sub-menu-item">
-                                                <a href="{{route('admin.getusers')}}" class="">
+                                                <a href="{{ route('admin.getusers') }}" class="">
                                                     <div class="text">قائمة المستخدمبن</div>
                                                 </a>
                                             </li>
@@ -105,7 +105,7 @@
                                             </li> --}}
                                         </ul>
                                     </li>
-                                 
+
 
                                 </ul>
                             </div>
@@ -220,7 +220,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        
+
                                     </div>
 
                                     <!-- Tours Table -->
@@ -230,10 +230,10 @@
                                                 <div class="body-title">number</div>
                                             </li>
                                             <li>
-                                                <div class="body-title">phone</div>
+                                                <div class="body-title" style="transform: translateX(-45%)">phone</div>
                                             </li>
                                             <li>
-                                                <div class="body-title">email</div>
+                                                <div class="body-title" style="transform: translateX(-480%)">email</div>
                                             </li>
 
                                         </ul>
@@ -255,14 +255,15 @@
                                                             {{ $user->email }}
                                                         </div>
                                                         <div class="list-icon-function">
-                                                            {{-- <form action="{{route('deletephoto' , $photo->id)}}" method="post">
-                                              @csrf
-                                              @method('DELETE')
-                                                   
-                                                            <button class="item ">
-                                                                <i class="icon-trash-2"></i>
-                                                            </button>
-                                                                  </form> --}}
+                                                            <form action="{{ route('deleteuser', $user->id) }}"
+                                                                method="post" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                                @csrf
+                                                                @method('DELETE')
+
+                                                                <button class="item " >
+                                                                    <i class="icon-trash-2"></i>
+                                                                </button>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </li>

@@ -36,3 +36,8 @@ Route::post('/login', [App\Http\Controllers\admin\AdminLoginController::class, '
 Route::post('/logout', [App\Http\Controllers\admin\AdminLoginController::class, 'logout'])->name('admin.logout');
 Route::get('/users', [App\Http\Controllers\admin\AdminLoginController::class, 'getusers'])
 ->name('admin.getusers')->middleware('admin');
+
+
+
+Route::delete('/users/{id}', [App\Http\Controllers\admin\AdminLoginController::class, 'deleteuser'])
+->name('deleteuser');

@@ -42,7 +42,19 @@ class AdminLoginController extends Controller
 
     public function getusers(Request $request)
     {
-        $users = User::all();
+        $users = User::where('role', 'user')->get();
         return view('dashboard.users', compact('users'));
     }
+
+    public function deleteuser($id)
+    {
+        $user = User::find($id);
+        if ($user) {
+            $user->delete();
+            return redirect()->back()->with('success', 'User deleted successfully');
+        } else {
+            return redirect()->back()->with('error', 'User not found');
+        }
+    }
+   
 }

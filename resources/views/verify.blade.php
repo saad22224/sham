@@ -93,7 +93,6 @@
         <div class="checkmark"></div>
         <h1 class="message">تم توثيق حسابك بنجاح</h1>
         <p class="sub-message">شكراً لإتمام عملية التوثيق</p>
-        <a href="{{url('/')}}" class="button">العودة للرئيسية</a>
     </div>
 </body>
 </html>

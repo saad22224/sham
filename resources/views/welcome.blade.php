@@ -232,7 +232,20 @@
         </div>
 
         <h1 class="title">توثيق الحساب</h1>
-
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if (session('error'))
+            <h6 style="text-align: center; color: red;">
+                {{ session('error') }}
+            </h6>
+        @endif
         <form id="validationForm" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="form-group">
