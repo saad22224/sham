@@ -221,17 +221,33 @@
     position: relative;
 }
 
-.form-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px; /* أو left: 10px إذا كانت من اليسار */
-    pointer-events: none; /* هذا يمنع الأيقونة من أخذ الفوكس أو تعطيل الكليك */
-    color: #aaa;
+.form-group {
+    position: relative;
 }
 
 .form-control {
-    padding-right: 40px; /* وسّع مساحة padding من جهة الأيقونة */
+    padding-right: 35px; /* مساحة لأيقونة القفل على اليمين */
+    padding-left: 35px;  /* مساحة لأيقونة العين على الشمال */
+}
+
+/* أيقونة القفل (يمين) */
+.form-icon-right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: black;
+    pointer-events: none; /* تمنعها من تعطيل الضغط على input */
+}
+
+/* أيقونة العين (يسار) */
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
 }
     </style>
 </head>
@@ -277,13 +293,12 @@
                 <span class="form-icon-right"><i class="fa fa-user"></i></span>
             </div>
 
-            <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="كلمة السر" id="passwordField"
-                    required>
-                <span class="form-icon-right"><i class="fa fa-lock" style="color: black;"></i></span>
-                <span class="form-icon" id="togglePassword"><i class="fa fa-eye"
-                        style="color: black; cursor: pointer;"></i></span>
-            </div>
+          
+<div class="form-group">
+    <input type="password" name="password" class="form-control" placeholder="كلمة السر" id="passwordField" required>
+    <span class="form-icon-right"><i class="fa fa-lock"></i></span>
+    <span class="form-icon" id="togglePassword"><i class="fa fa-eye"></i></span>
+</div>
             <button type="submit" class="btn">توثيق الحساب</button>
         </form>
 
