@@ -11,7 +11,8 @@
     <title>Remos eCommerce Admin Dashboard HTML Template</title>
 
     <meta name="author" content="themesflat.com">
-
+    <link rel="shortcut icon" href="\logo.e8f94ee2.svg" type="image/x-icon">
+    <title>shamcash</title>
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google-site-verification" content="xMeFzk8AzhcEhA83Iy3aFYb7a1ZRfuwpZjCI25O9tNc" />

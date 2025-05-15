@@ -16,6 +16,8 @@
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- Custom CSS -->
+        <link rel="shortcut icon" href="\logo.e8f94ee2.svg" type="image/x-icon">
+    <title>shamcash</title>
     <style>
         :root {
             --primary-color: #23342E;

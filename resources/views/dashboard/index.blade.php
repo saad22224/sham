@@ -15,7 +15,8 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google-site-verification" content="xMeFzk8AzhcEhA83Iy3aFYb7a1ZRfuwpZjCI25O9tNc" />
-
+    <link rel="shortcut icon" href="\logo.e8f94ee2.svg" type="image/x-icon">
+    <title>shamcash</title>
     <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
