@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="shortcut icon" href="\logo.e8f94ee2.svg" type="image/x-icon">
+       <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
     <title>shamcash</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Noto Kufi Arabic", sans-serif;
             background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
             height: 100vh;
             margin: 0;

